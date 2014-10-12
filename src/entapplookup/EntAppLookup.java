@@ -12,7 +12,7 @@ public class EntAppLookup {
 
     public static void main(String... args) throws NamingException {
         Context ctx = new InitialContext();
-        log.info(ctx.getEnvironment().toString());
+        log.fine(ctx.getEnvironment().toString());
         Object obj = ctx.lookup("ejb.EJBRemoteInterface");
         EJBRemoteInterface ejb = (EJBRemoteInterface) obj;
         log.info(ejb.getResult());
